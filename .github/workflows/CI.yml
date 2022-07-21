@@ -9,8 +9,5 @@ jobs:
       run:
         shell: bash -l {0}
     steps:
-      - name: Install package
-        run: |
-          python3 -m pip install .
       - name: Test with pytest
         run: pytest .
