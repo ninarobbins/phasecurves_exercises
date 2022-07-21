@@ -9,5 +9,12 @@ jobs:
       run:
         shell: bash -l {0}
     steps:
+          name: Build Environment
+          command: |
+            python --version
+            python -m venv phasecurves
+            source phasecurves/bin/activate
+            pip install --upgrade pip
+            pip install pytest
       - name: Test with pytest
         run: pytest .
